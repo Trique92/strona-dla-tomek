@@ -1,0 +1,286 @@
+@import 'colors';
+@import 'animation';
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	scroll-padding-top: 66px;
+}
+
+body {
+	position: relative;
+	font-family: 'Montserrat', sans-serif;
+	background-color: $bg-color !important;
+}
+
+.shadow-bg {
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+.purple-text {
+	color: rgb(37, 230, 255);
+}
+
+nav {
+	text-transform: uppercase;
+	transition: background-color 1s;
+	z-index: 1;
+
+	a,
+	i {
+		color: $white;
+	}
+
+	a:hover {
+		color: $main-color;
+	}
+
+	.fa-bars {
+		padding: 10px;
+	}
+
+	.navbar-brand {
+		font-weight: bold;
+	}
+
+	.active {
+		color: $main-color;
+	}
+}
+
+header {
+	color: $white;
+
+	h1 {
+		font-size: 30px;
+		text-transform: uppercase;
+	}
+
+	p {
+		font-size: 14px;
+	}
+
+	.hero-img {
+		position: relative;
+		height: 100vh;
+		background-image: url('../IMG/tlobgmaly.jpg');
+		background-position: center;
+		background-size: cover;
+		background-attachment: fixed;
+		z-index: 0;
+	}
+}
+
+.hero-shadow {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.7);
+	z-index: -10;
+}
+
+.hero-text {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	flex-direction: column;
+	z-index: 5;
+	padding: 10px;
+	text-align: center;
+}
+
+.fa-chevron-down {
+	position: absolute;
+	font-size: 30px;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	color: $white;
+}
+
+h2 {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.underline {
+	margin: 0 auto 40px;
+	width: 60px;
+	height: 4px;
+	background-color: $main-color;
+}
+
+.team {
+	position: relative;
+	background-image: url('../IMG/team/teambgbig.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+	z-index: 0;
+
+	h2 {
+		color: $bg-color;
+	}
+
+	.team-shadow {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.3);
+		z-index: -5;
+	}
+
+	.card {
+		transition: transform 0.5s;
+		img {
+			height: 300px;
+			object-fit: cover;
+		}
+	}
+
+	i {
+		padding: 10px;
+	}
+
+	.card-title {
+		margin-bottom: 20px;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	.card:hover {
+		transform: scale(0.9);
+	}
+}
+
+.contact {
+	position: relative;
+	background-image: url('../IMG/contactbgbig.jpg');
+	background-size: cover;
+	z-index: 0;
+
+	h2 {
+		font-weight: bold;
+	}
+
+	.contact-shadow {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 9, 27, 0.8);
+		z-index: -5;
+	}
+
+	h2 {
+		color: whitesmoke;
+		align-items: center;
+	}
+
+	h3 {
+		color: whitesmoke;
+		align-items: center;
+
+		text-transform: uppercase;
+	}
+
+	p {
+		color: whitesmoke;
+		align-items: center;
+		margin-bottom: 15px;
+		text-transform: uppercase;
+	}
+
+	.contact-item {
+		margin: 30px 0;
+	}
+
+	.social-media {
+		font-size: 36px;
+		a {
+			padding: 12px;
+		}
+		a:hover {
+			color: lightgray;
+		}
+	}
+}
+
+.ourtruck {
+	.carousel-item {
+		position: relative;
+	}
+	.carousel-caption {
+		position: absolute;
+		left: 0;
+		right: 0;
+		background-color: rgba(0, 0, 0, 0.6);
+		padding: 40px 0;
+	}
+	.carousel-indicators {
+		padding-bottom: 20px;
+	}
+}
+
+.aboutus {
+	i {
+		margin-top: 20px;
+		font-size: 30px;
+	}
+	.aboutus-card-title {
+		font-size: 18px;
+		text-transform: uppercase;
+	}
+	.aboutus-card-text {
+		font-size: 14px;
+	}
+
+	.aboutus-hover {
+		transition: 1s;
+	}
+	.aboutus-hover:hover {
+		color: $main-color;
+	}
+}
+
+@media (min-width: 375px) {
+	header {
+		h1 {
+			font-size: 36px;
+		}
+		p {
+			font-size: 16px;
+		}
+	}
+}
+@media (min-width: 768px) {
+	header {
+		h1 {
+			font-size: 42px;
+		}
+		p {
+			font-size: 20px;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	html {
+		scroll-padding-top: 56px;
+	}
+}
+
+@media (min-width: 1200px) {
+	header {
+		.hero-img {
+			background-image: url('../IMG/tlobgduzy.jpg');
+		}
+	}
+}
